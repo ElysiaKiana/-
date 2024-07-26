@@ -44,7 +44,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 80vh;
+            min-height: 70vh;
             color: #333;
             text-align: center;
         }
@@ -55,6 +55,11 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: center;
+            width: 500px;
+        }
+
+        .login-form h2 {
+            margin-top: 0;
         }
 
         .login-form input[type="text"],
@@ -62,7 +67,6 @@
         .login-form input[type="submit"],
         .login-form input[type="button"] {
             width: calc(100% - 22px);
-            /* 确保所有输入框和按钮具有相同的宽度 */
             padding: 10px;
             margin: 10px 0;
             border-radius: 5px;
@@ -81,6 +85,19 @@
         .login-form input[type="button"]:hover {
             background-color: #45a049;
         }
+
+        /* 新增的样式类 */
+        .introduction {
+            text-align: left;
+            margin: 20px;
+            width: auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            
+        }
     </style>
 </head>
 
@@ -88,19 +105,31 @@
     <div class="navbar">
         <h1>“碳足追踪”城市碳排智能监测平台</h1>
     </div>
+   
 
     <div class="container">
+
+        <div class="introduction">
+            <p style="font-size: 20px;text-align: center;">欢迎访问“碳足追踪”城市碳排智能监测平台。这是一个致力于帮助城市追踪和管理碳排放的平台。
+                可以利用视觉大数据分析和先进的图像处理技术，实时监测城市碳排放。
+                同时，通过精确分析交通、工业排放和植被覆盖等数据，生成实时碳排放地图，支持政府和企业制定科学的减排策略。
+                此外，本项目还参与碳交易市场，为城市创造经济收益，推动绿色技术发展，促进经济结构的绿色转型。</p>
+        </div>
+        <!-- 登录表单 -->
         <div class="login-form">
             <h2>登录</h2>
             <form action="/submit_login" method="post">
                 <input type="text" name="username" placeholder="用户名" required>
+                <br><br>
                 <input type="password" name="password" placeholder="密码" required>
+                <br><br>
                 <input type="text" name="captcha" placeholder="验证码" required>
+                <br><br>
                 <input type="submit" value="立即登录">
-                <!-- <input type="submit" value="立即注册"> -->
                 <input type="button" value="注册" onclick="location.href='/register'">
             </form>
         </div>
+        
     </div>
 
     <div class="footer">
