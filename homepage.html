@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>“碳足追踪”城市碳排智能监测平台</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('背景.jpeg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .navbar h1 {
+            color: #f2f2f2;
+            text-align: center;
+            margin: 0;
+            padding: 14px 16px;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            color: #333;
+            text-align: center;
+        }
+
+        .login-form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"],
+        .login-form input[type="submit"],
+        .login-form input[type="button"] {
+            width: calc(100% - 22px);
+            /* 确保所有输入框和按钮具有相同的宽度 */
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .login-form input[type="submit"],
+        .login-form input[type="button"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .login-form input[type="submit"]:hover,
+        .login-form input[type="button"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <h1>“碳足追踪”城市碳排智能监测平台</h1>
+    </div>
+
+    <div class="container">
+        <div class="login-form">
+            <h2>登录</h2>
+            <form action="/submit_login" method="post">
+                <input type="text" name="username" placeholder="用户名" required>
+                <input type="password" name="password" placeholder="密码" required>
+                <input type="text" name="captcha" placeholder="验证码" required>
+                <input type="submit" value="立即登录">
+                <!-- <input type="submit" value="立即注册"> -->
+                <input type="button" value="注册" onclick="location.href='/register'">
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 “碳足追踪”城市碳排智能监测平台. All rights reserved.</p>
+    </div>
+</body>
+
+</html>
